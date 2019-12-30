@@ -1,0 +1,15 @@
+.question-item {
+    padding-left: 20px;
+    border: 1px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .link {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &:hover {
+        .link {
+            text-decoration: underline;
+        }
+    }
+}

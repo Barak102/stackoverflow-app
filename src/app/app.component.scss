@@ -1,0 +1,26 @@
+.container {
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .sections {
+display: flex;
+align-items: start;
+justify-content: center;
+width: 90vw;
+height: 80vh;
+      .left-section {
+          width: 30%;
+          height: 100%;
+          display: inline-block;
+        }
+        .right-section {
+            border: #000000 1px solid;
+            width: 70%;
+            height: 100%;
+            display: inline-block;
+        }
+    }
+}
