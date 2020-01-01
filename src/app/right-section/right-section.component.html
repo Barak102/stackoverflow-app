@@ -1,3 +1,14 @@
 <div class="questio-item-data">
-    Question data here
+    <div class="line" *ngIf="selectedQuestion">
+        <div class="key">Score:</div>
+        <div class="value">{{selectedQuestion.score}}</div>
     </div>
+    <div class="line" *ngIf="selectedQuestion">
+        <div class="key">View count:</div>
+        <div class="value">{{selectedQuestion.views}}</div>
+    </div>
+    <div class="line" *ngIf="selectedQuestion">
+        <div class="key">Link:</div>
+        <div class="value"><a [href]="selectedQuestion.url" target="_blank">{{selectedQuestion.url}}</a></div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
 <input type="text" [(ngModel)]="searchText" placeholder="search here"/>
-<button class="submit" (click)="searchCommand()">
+<button class="submit" (click)="searchCommand($event)" [disabled]="!searchText">
 Search
 </button>

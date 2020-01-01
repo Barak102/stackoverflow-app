@@ -1,0 +1,28 @@
+.questio-item-data {
+  .line {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .key {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-decoration: underline;
+    }
+    .value {
+      font-weight: 600;
+      a {
+        &:active,
+        &:visited,
+        &:link {
+            text-decoration: none;
+          color: #000000;
+        }
+
+        &:hover {
+           text-decoration: underline;
+           color: blue;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
+import {IQuestionData} from './IQuestionData';
 export interface IQuestion {
     title: string;
-    url: string;
+    data: IQuestionData;
 }
