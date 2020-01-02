@@ -1,9 +1,9 @@
-import { IQuestion } from './../../types/IQuestion.d';
+import { IQuestion } from '../types/IQuestion';
 import { pipe } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { OpSearchService } from 'src/services/op-search.service';
+import { OpSearchService } from 'src/op-module/services/op-search.service';
 import { map } from 'rxjs/operators';
-import { IQuestionData } from 'src/types/IQuestionData';
+import { IQuestionData } from 'src/op-module/types/IQuestionData';
 
 
 @Component({
@@ -38,7 +38,7 @@ export class LeftSectionComponent implements OnInit {
   }
 
 
-  displayData(selectedQuestion: IQuestion): void {
+  questionClickHandler(selectedQuestion: IQuestion): void {
     this.opSearchService.selectedQuestion$.next(selectedQuestion.data);
   }
 }

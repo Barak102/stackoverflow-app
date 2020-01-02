@@ -2,12 +2,12 @@
   .search-bar {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .sections {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     width: 90vw;
     height: 80vh;

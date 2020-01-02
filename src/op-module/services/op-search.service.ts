@@ -1,6 +1,6 @@
-import { IProvider } from '../op-module/types/IProvider';
+import { IProvider } from '../types/IProvider';
 import { Injectable } from '@angular/core';
-import { pipe, BehaviorSubject } from 'rxjs';
+import { Subject, pipe } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { IQuestionData } from 'src/op-module/types/IQuestionData';
@@ -10,8 +10,8 @@ import { IQuestionData } from 'src/op-module/types/IQuestionData';
 })
 export class OpSearchService {
 
-  public questionsResults$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
-  public selectedQuestion$: BehaviorSubject<IQuestionData> = new BehaviorSubject<IQuestionData>(null);
+  public questionsResults$: Subject<any> = new Subject<any>();
+  public selectedQuestion$: Subject<IQuestionData> = new Subject<IQuestionData>();
   private providers: IProvider[] = [
     {
       name: 'stackoverflow',
@@ -23,7 +23,9 @@ export class OpSearchService {
   ];
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    debugger;
+  }
 
 
   getProvider(name: string): IProvider {
@@ -31,6 +33,7 @@ export class OpSearchService {
   }
 
   public search(selectedProvider: IProvider, searchText: string): void {
+    debugger;
     this.http.get(selectedProvider.getUrl(searchText))
       .pipe(
         map(res => selectedProvider.mapHandling(res)))

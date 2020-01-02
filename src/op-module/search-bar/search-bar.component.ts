@@ -1,6 +1,6 @@
-import { IProvider } from './../../types/IProvider.d';
-import { OpSearchService } from './../../services/op-search.service';
 import { Component, OnInit } from '@angular/core';
+import { IProvider } from '../types/IProvider';
+import { OpSearchService } from '../services/op-search.service';
 
 @Component({
   selector: 'app-search-bar',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IQuestionData } from 'src/types/IQuestionData';
-import { OpSearchService } from 'src/services/op-search.service';
+import { OpSearchService } from './../services/op-search.service';
+import { IQuestionData } from '../types/IQuestionData';
 
 @Component({
   selector: 'app-right-section',
